@@ -14,7 +14,7 @@ This project uses the [GNU AGPLv3](https://github.com/anthrxc/EasyCV/LICENSE.md)
 
 ## Donations
 
-This project runs for free, so if you wish to support me, you can either  
-[Sponsor] this repo, or donate through [PayPal](https://paypal.me/anthrxc) or [Revolut](https://checkout.revolut.com/pay/c3fa1f25-8342-4d89-8463-ad3314968b15).  
+This project runs for free, so if you wish to support me, hit the **Sponsor** button!   
+Or you can go directly to [PayPal](https://paypal.me/anthrxc) or [Revolut](https://checkout.revolut.com/pay/c3fa1f25-8342-4d89-8463-ad3314968b15).   
 
 **Thank you!**
