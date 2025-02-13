@@ -1,0 +1,274 @@
+/* Light Mode */
+:root {
+    --bg-color: #EEDCBF;
+    --card-color: #FFFFFF;
+    --text-color: #000000;
+    --primary-color: #2246B3;
+    --button-hover: #2C52C5;
+    --button-text: #FFFFFF;
+    --remove-color: #E74C3C;
+    --remove-hover: #DE3421;
+    --input-bg: #FFFFFF;
+    --input-border: #CCCCCC;
+    --textarea-bg: #F5F5F5;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #1E1E1E;
+    --card-color: #2C2C2C;
+    --text-color: #F5F5F5;
+    --primary-color: #2246B3;
+    --button-hover: #2C52C5;
+    --remove-color: #E74C3C;
+    --remove-hover: #DE3421;
+    --button-text: #FFFFFF;
+    --input-bg: #333333;
+    --input-border: #555555;
+    --textarea-bg: #444444;
+}
+
+/* Navbar Styles with Card Style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1.25rem 1.875rem;
+    /* Adjust padding to match the card's padding */
+    border-radius: 0.5rem;
+    /* Rounded corners for consistency with the card */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    /* Box shadow */
+    margin: 1.25rem auto 0;
+    /* Margin to separate from other content */
+    width: 50rem;
+    /* Set the width to match the card's width */
+}
+
+.navbar .logo {
+    font-family: "Kaushan Script";
+    font-size: 2.25rem;
+    /* 36px converted to rem */
+    font-weight: bold;
+    color: var(--button-text);
+    /* White color for logo text */
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 1.25rem;
+    /* Adds spacing between the nav items */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--button-text);
+    /* White color for nav links */
+    font-size: 1.125rem;
+    /* 18px converted to rem */
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #e0e0e0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+    border: 1px solid var(--button-text);
+    padding: 0.625rem 0.9375rem;
+    /* 10px 15px converted to rem */
+    cursor: pointer;
+    font-size: 1rem;
+    /* 16px converted to rem */
+    font-weight: 500;
+    border-radius: 0.3125rem;
+    /* 5px converted to rem */
+}
+
+.dropbtn:hover {
+    color: #e0e0e0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--card-color);
+    min-width: 10rem;
+    /* 160px converted to rem */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    /* Box shadow with rem */
+    z-index: 1;
+    border-radius: 0.3125rem;
+    /* 5px converted to rem */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+    /* 12px 16px converted to rem */
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid var(--input-border);
+    /* Border between items */
+}
+
+.dropdown-content a:hover {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        /* Full width on mobile */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.625rem;
+        /* 10px converted to rem */
+    }
+
+    .nav-links a {
+        padding: 0.625rem 0;
+        /* 10px 0 converted to rem */
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 50rem;
+    margin: auto;
+    padding: 1.25rem;
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--card-color);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card label {
+    display: block;
+    margin-bottom: 0.3125rem;
+    font-weight: 600;
+}
+
+.card input,
+.card select,
+.card textarea {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 0.3125rem;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+/* Button Styles for Add and Remove */
+button {
+    background-color: var(--primary-color);
+    color: var(--button-text);
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    color: var(--primary-color);
+    transform: scale(1.01);
+}
+
+/* Remove Button Styling */
+button.remove-btn {
+    background-color: var(--remove-color);
+    border-color: var(--remove-color);
+}
+
+button.remove-btn:hover {
+    background-color: var(--remove-hover);
+    color: var(--button-text);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background: none;
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    opacity: 0.7;
+}
+
+.dark-mode .dark-mode-toggle {
+    color: var(--text-color);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 1rem;
+    }
+
+    .card input,
+    .card select,
+    .card textarea {
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    }
+}

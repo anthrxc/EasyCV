@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyCV</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">EasyCV</div>
+        <div class="nav-links">
+            <a href="#">CV Advice</a>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="card">
+            <h2>Personal Information</h2>
+            <label>Full Name:</label>
+            <input type="text" required>
+            <label>Email:</label>
+            <input type="email" required>
+            <label>Phone Number:</label>
+            <input type="tel" required>
+            <label>Profile Photo:</label>
+            <input type="file" accept="image/*">
+        </div>
+
+        <div class="card">
+            <h2>Summary</h2>
+            <textarea placeholder="Write a brief summary about yourself..." required></textarea>
+        </div>
+
+        <div class="card" id="experienceContainer">
+            <h2>Work History</h2>
+            <div id="work"></div>
+
+            <button type="button" onclick="addExperience()">Add Experience</button>
+        </div>
+
+        <div class="card" id="educationContainer">
+            <h2>Education</h2>
+            <div id="education"></div>
+
+            <button type="button" onclick="addEducation()">Add Education</button>
+        </div>
+
+        <div class="card" id="skillsContainer">
+            <h2>Skills</h2>
+            <div id="skills"></div>
+
+            <button type="button" onclick="addSkill()">Add Skill</button>
+        </div>
+
+        <div class="card" id="certificationsContainer">
+            <h2>Certifications</h2>
+            <div id="certifications"></div>
+
+            <button type="button" onclick="addCertification()">Add Certification</button>
+        </div>
+
+        <div class="card">
+            <h2>Generate!</h2>
+            <label>Style:</label>
+            <select>
+                <option value="style1">Style 1</option>
+                <option value="style2">Style 2</option>
+            </select>
+            <button type="button" onclick="generateResume()">Generate</button>
+        </div>
+    </div>
+</body>
+
+</html>
