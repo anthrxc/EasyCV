@@ -1,6 +1,6 @@
 // Function to add experience entry
 function addExperience() {
-    const container = document.getElementById("experienceContainer");
+    const container = document.getElementById("work");
     const div = document.createElement("div");
     div.classList.add("experience-entry");
     div.innerHTML = `
@@ -21,7 +21,7 @@ function addExperience() {
 
         <!-- Button Container for Add/Remove -->
         <div class="add-remove-btn-container">
-            <button class="add-remove-btn remove-btn" type="button" onclick="removeEntry(this)">Remove</button>
+            <button class="add-remove-btn remove-btn" type="button" onclick="removeEntry(this)"><img class="xmark" src="assets/xmark.svg"> Remove</button>
         </div>
     `;
     container.appendChild(div);
@@ -29,7 +29,7 @@ function addExperience() {
 
 // Function to add education entry
 function addEducation() {
-    const container = document.getElementById("educationContainer");
+    const container = document.getElementById("education");
     const div = document.createElement("div");
     div.classList.add("education-entry");
     div.innerHTML = `
@@ -43,7 +43,7 @@ function addEducation() {
         <input type="text" name="edu_duration[]" placeholder="MM/YYYY - MM/YYYY" required>
         
         <div class="add-remove-btn-container">
-            <button class="add-remove-btn remove-btn" type="button" onclick="removeEntry(this)">Remove</button>
+            <button class="add-remove-btn remove-btn" type="button" onclick="removeEntry(this)"><img class="xmark" src="assets/xmark.svg"> Remove</button>
         </div>
     `;
     container.appendChild(div);
@@ -51,7 +51,7 @@ function addEducation() {
 
 // Function to add skill entry
 function addSkill() {
-    const container = document.getElementById("skillsContainer");
+    const container = document.getElementById("skills");
     const div = document.createElement("div");
     div.classList.add("skill-entry");
     div.innerHTML = `
@@ -59,7 +59,7 @@ function addSkill() {
         <input type="text" name="skill[]" required>
         
         <div class="add-remove-btn-container">
-            <button class="add-remove-btn remove-btn" type="button" onclick="removeEntry(this)">Remove</button>
+            <button class="add-remove-btn remove-btn" type="button" onclick="removeEntry(this)"><img class="xmark" src="assets/xmark.svg"> Remove</button>
         </div>
     `;
     container.appendChild(div);
@@ -67,7 +67,7 @@ function addSkill() {
 
 // Function to add certification entry
 function addCertification() {
-    const container = document.getElementById("certificationsContainer");
+    const container = document.getElementById("certifications");
     const div = document.createElement("div");
     div.classList.add("certification-entry");
     div.innerHTML = `
@@ -77,11 +77,11 @@ function addCertification() {
         <label>Issuing Organization:</label>
         <input type="text" name="organization[]" required>
         
-        <label>Date Obtained:</label>
-        <input type="text" name="cert_date[]" placeholder="MM/YYYY" required>
-        
+        <label>Valid From-To:</label>
+        <input type="text" name="cert_valid[]" placeholder="MM/YYYY - MM/YYYY" required>
+
         <div class="add-remove-btn-container">
-            <button class="add-remove-btn remove-btn" type="button" onclick="removeEntry(this)">Remove</button>
+            <button class="add-remove-btn remove-btn" type="button" onclick="removeEntry(this)"><img class="xmark" src="assets/xmark.svg"> Remove</button>
         </div>
     `;
     container.appendChild(div);

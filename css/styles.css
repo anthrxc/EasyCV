@@ -74,61 +74,6 @@
     color: #e0e0e0;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: var(--primary-color);
-    color: var(--button-text);
-    border: 1px solid var(--button-text);
-    padding: 0.625rem 0.9375rem;
-    /* 10px 15px converted to rem */
-    cursor: pointer;
-    font-size: 1rem;
-    /* 16px converted to rem */
-    font-weight: 500;
-    border-radius: 0.3125rem;
-    /* 5px converted to rem */
-}
-
-.dropbtn:hover {
-    color: #e0e0e0;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--card-color);
-    min-width: 10rem;
-    /* 160px converted to rem */
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    /* Box shadow with rem */
-    z-index: 1;
-    border-radius: 0.3125rem;
-    /* 5px converted to rem */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: var(--text-color);
-    padding: 0.75rem 1rem;
-    /* 12px 16px converted to rem */
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid var(--input-border);
-    /* Border between items */
-}
-
-.dropdown-content a:hover {
-    background-color: var(--primary-color);
-    color: var(--button-text);
-}
-
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     .navbar {
@@ -188,6 +133,49 @@ body {
     margin-bottom: 1rem;
 }
 
+.question {
+    height: 1rem;
+    width: 1rem;
+    transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+.question:hover {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(91%) saturate(1997%) hue-rotate(218deg) brightness(89%) contrast(95%);
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    /* Vertically center the tooltip */
+    left: 125%;
+    /* Position the tooltip to the right of the icon */
+    transform: translateY(-50%);
+    /* Adjust vertical positioning to center */
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    font-weight: 500;
+}
+
+/* Show tooltip on hover */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 .card label {
     display: block;
     margin-bottom: 0.3125rem;
@@ -197,7 +185,8 @@ body {
 .card input,
 .card select,
 .card textarea {
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     padding: 0.625rem;
     margin-bottom: 1rem;
     border: 1px solid var(--input-border);
@@ -205,6 +194,12 @@ body {
     background-color: var(--input-bg);
     color: var(--text-color);
     box-sizing: border-box;
+}
+
+.plus, .xmark {
+    height: 1rem;
+    width: 1rem;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg) brightness(103%) contrast(101%);
 }
 
 /* Button Styles for Add and Remove */
@@ -223,7 +218,7 @@ button {
 
 button:hover {
     background-color: var(--button-hover);
-    color: var(--primary-color);
+    color: var(--button-text);
     transform: scale(1.01);
 }
 
@@ -231,6 +226,7 @@ button:hover {
 button.remove-btn {
     background-color: var(--remove-color);
     border-color: var(--remove-color);
+    margin: 0 auto 2rem auto;
 }
 
 button.remove-btn:hover {

@@ -26,7 +26,13 @@
 
     <div class="container">
         <div class="card">
-            <h2>Personal Information</h2>
+            <h2>Personal Information
+                <div class="tooltip-container">
+                    <img class="question" src="assets/question.svg" alt="Help">
+                    <span class="tooltip-text">Fill in your personal details, and add a profile photo (optional).</span>
+                </div>
+            </h2>
+            
             <label>Full Name:</label>
             <input type="text" required>
             <label>Email:</label>
@@ -38,36 +44,66 @@
         </div>
 
         <div class="card">
-            <h2>Summary</h2>
-            <textarea placeholder="Write a brief summary about yourself..." required></textarea>
+            <h2>Summary
+                <div class="tooltip-container">
+                    <img class="question" src="assets/question.svg" alt="Help">
+                    <span class="tooltip-text">Write a short summary that highlights your experience, skills, and career goals.</span>
+                </div>
+            </h2>
+
+            <textarea placeholder="Write a brief summary about yourself..."></textarea>
         </div>
 
         <div class="card" id="experienceContainer">
-            <h2>Work History</h2>
+            <h2>Work History
+                <div class="tooltip-container">
+                    <img class="question" src="assets/question.svg" alt="Help">
+                    <span class="tooltip-text">Write your current/past work experiences, latest first (if applicable).</span>
+                </div>
+            </h2>
+            
             <div id="work"></div>
 
-            <button type="button" onclick="addExperience()">Add Experience</button>
+            <button type="button" onclick="addExperience()"><img class="plus" src="assets/plus.svg"> Add Experience</button>
         </div>
 
         <div class="card" id="educationContainer">
-            <h2>Education</h2>
+            <h2>Education
+                <div class="tooltip-container">
+                    <img class="question" src="assets/question.svg" alt="Help">
+                    <span class="tooltip-text">Write your education history, latest first (if applicable).</span>
+                </div>
+            </h2>
+            
             <div id="education"></div>
 
-            <button type="button" onclick="addEducation()">Add Education</button>
+            <button type="button" onclick="addEducation()"><img class="plus" src="assets/plus.svg"> Add Education</button>
         </div>
 
         <div class="card" id="skillsContainer">
-            <h2>Skills</h2>
+            <h2>Skills
+                <div class="tooltip-container">
+                    <img class="question" src="assets/question.svg" alt="Help">
+                    <span class="tooltip-text">Input skills related to your field of work (if applicable).</span>
+                </div>
+            </h2>
+            
             <div id="skills"></div>
 
-            <button type="button" onclick="addSkill()">Add Skill</button>
+            <button type="button" onclick="addSkill()"><img class="plus" src="assets/plus.svg"> Add Skill</button>
         </div>
 
         <div class="card" id="certificationsContainer">
-            <h2>Certifications</h2>
+            <h2>Certifications
+                <div class="tooltip-container">
+                    <img class="question" src="assets/question.svg" alt="Help">
+                    <span class="tooltip-text">Write down obtained certificates (if applicable).</span>
+                </div>
+            </h2>
+
             <div id="certifications"></div>
 
-            <button type="button" onclick="addCertification()">Add Certification</button>
+            <button type="button" onclick="addCertification()"><img class="plus" src="assets/plus.svg"> Add Certification</button>
         </div>
 
         <div class="card">
